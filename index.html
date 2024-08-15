@@ -1,456 +1,550 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Rita Aziz Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+    <title>Rita Aziz | Software Engineer & CS Student</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        
+        .hero-content {
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e67e22;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    .education-item {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    
+    .education-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Rita Aziz</h1>
-								<h3>Computer Science Student </h3>
-								<h3>Aspring Software Engineer</h3>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#education">Education</a></li>
-								<li><a href="#skills">Technical Skills</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#work">Work Experience</a></li>
-								<li><a href="#resume">Resume</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    .education-text {
+        margin-bottom: 20px;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    .education-item h3 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    
+    .education-item h4 {
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+    }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<p>Welcome to my personal website! My name is Rita Aziz and I am currently pursing my Bachelors in Computer Science at George Mason University and working as a Software Engineering Fellow at Headstarters AI.  I am passionate about software engineering and artificial intelligence, and I am eager to share my journey and insights with you. Here you can find information about my work experience, technical skills, contact information, and more! </p>
-							</article>
+    .education-item h5 {
+        color: #777;
+    }
 
-						<!-- Education -->	
-						<article id="education">
-							<h2 class="major">Education</h2>
-							<span class="image main"><img src="images/mason.png" alt="" /></span>
-							<h3>George Mason University, Computer Science, B.S.</h3>
-							<h4>August 2022 - Present</h4>
-							<h4>Grade: Junior</h4>
-							<span class="image main"><img src="images/club.jpeg" alt="" /></span>
-							<h4>Clubs: GMU Computer Science Club</h4>
-							<p></p>
-						</article>
-
-						<!-- Technical Skills -->	
-						<article id="skills">
-							<h2 class="major">Technical Skills</h2>
-							<span class="image main"><img src="images/logos.png" alt="" /></span>
-							<h4>Programming Languages:</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Python</li>
-								<li style="margin-bottom: 5px;">Java</li>
-								<li style="margin-bottom: 5px;">C</li>
-								<li style="margin-bottom: 5px;">HTML</li>
-								<li style="margin-bottom: 5px;">CSS</li>
-								<li style="margin-bottom: 5px;">Javascript</li>
-							</ul>
-							<p></p>
-							<h4>Technologies:</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">OpenAI</li>
-								<li style="margin-bottom: 5px;">NextJS</li>
-								<li style="margin-bottom: 5px;">NodeJS</li>
-								<li style="margin-bottom: 5px;">AWS</li>
-								<li style="margin-bottom: 5px;">StripeAPI</li>
-								<li style="margin-bottom: 5px;">ReactJS</li>
-								<li style="margin-bottom: 5px;">Firebase</li>
-							</ul>
-							<p></p>
-							<h4>Operating Systems:</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Linux</li>
-								<li style="margin-bottom: 5px;">Unix</li>
-								<li style="margin-bottom: 5px;">Windows</li>
-								<li style="margin-bottom: 5px;">MacOS</li>
-							</ul>
-							<p></p>
-							<h4>Certificates:</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">HTML for Programmers (LinkedIn)</li>
-								<li style="margin-bottom: 5px;">CSS for Programmers (LinkedIn)</li>
-								<li style="margin-bottom: 5px;">AT&T 2024 Technology Academy</li>
-							</ul>
-						</article>
-
-						<!-- Projects -->	
-						<article id="projects">
-							<h2 class="major">Projects</h2>
-							<h3>Pantry Tracker</h3>
-							<h4>React, NextJS, Material-UI, Firebase</h4>
-							<a href="https://pantry-tracker-9lpqgu3gz-rita-azizs-projects.vercel.app/" target="_blank">
-								<span class="image main"><img src="images/pantry.png" alt="Resume" /></span>
-							</a>							<!-- Projects 
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Developed a user-friendly interface to add, update, and delete pantry items</li>
-								<li style="margin-bottom: 5px;">Utilized <b>NextJS</b> for server-side rendering, ensuring fast performance and optimized SEO</li>
-								<li style="margin-bottom: 5px;">Integrated <b>Firebase</b> Firestore for real-time database management, enabling instant updates to pantry items</li>
-								<li style="margin-bottom: 5px;">Utilized <b>Material-UI</b> for styling and enhancing user experience</li>
-							</ul> -->
-							<p></p>
-							<h3>AI Customer Support</h3>
-							<h4>OpenAI, NextJS, AWS, EC2, Lambda</h4>
-							<a href="https://github.com/ritaazizz/ai_customer_support" target="_blank">
-								<span class="image main"><img src="images/customersupp.webp" alt="Resume" /></span>
-							</a>
-							<!-- Projects
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Developed a chatbot using <b>OpenAI's</b> language model to handle customer inquiries</li>
-								<li style="margin-bottom: 5px;">Built the front-end using <b>NextJS</b> to ensure fast performance and efficient server-side rendering</li>
-								<li style="margin-bottom: 5px;">Deployed the application on <b>AWS</b> for scalable and reliable cloud infrastructure, utilizing AWS services like <b>EC2</b> and <b>Lambda</b></li>
-								<li style="margin-bottom: 5px;">Implemented conversantional flows and train the AI to provide accurate and helpful responses</li>
-								<li style="margin-bottom: 5px;">Included a fallback mechanism to transfer complex queries to human agents</li>
-							</ul> -->
-							
-							<p></p>
-							<h3>AI Flashcards & Stripe - Coming Soon!</h3>
-							<h4>OpenAI, Authentication Payment Gateway, Server-side programming</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Designed an AI-powered flashcard application using OpenAI's  to generate personalized study content and recommendations</li>
-								<li style="margin-bottom: 5px;">Implemented secure user authentication using Auth0, including multi-factor authentication to enhance security</li>
-								<li style="margin-bottom: 5px;">Integrated StripeAPI to handle subscription payments, manage billing, and track transactions securely</li>
-								<li style="margin-bottom: 5px;">Developed the front-end with a focus on user experience, incorporating interactive and responsive design elements using modern web development technologies</li>
-							</ul>
-							<p></p>
-							<h3>AI Rate my Professor - Coming Soon!</h3>
-							<h4> RAGm OpenAI, Vectors</h4>
-							<ul style="margin: 0; padding: 0;">
-								<li style="margin-bottom: 5px;">Developed an AI tool using OpenAI to analyze and rate professors based on student reviews</li>
-								<li style="margin-bottom: 5px;">Built a user-friendly interface with ReactJS and NextJS, allowing students to easily search for and view professor ratings</li>
-								<li style="margin-bottom: 5px;">Will implement a Vector database to store and retrieve reviews based on similarity and relevance</li>
-								<li style="margin-bottom: 5px;">Implemented a Robust Automated Grader (RAG) system using machine learning algorithms to accurately evaluate and grade student ratings</li>
-							</ul>
-						</article>
-
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work Experience</h2>
-								<span class="image main"><img src="images/headstarter.jpeg" alt="" /></span>
-								<h3>Software Engineering Fellow, Headstarter AI</h3>
-								<h4>July 2024 - Present</h4>
-								<ul style="margin: 0; padding: 0;">
-									<li style="margin-bottom: 5px;">Will build 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users</li>
-									<li style="margin-bottom: 5px;">Will develop projects from designto deployment leading 4+ engineering fellows using MVC design patterns</li>
-									<li style="margin-bottom: 5px;">Will be coached by Amazon, Bloomberg, and Capitol One engineers on Agile, CI/CD, Git, and microservice patterns</li>
-								</ul>
-							</article>
-							
-						<!-- Resume -->	
-						<article id="resume">
-							<h2 class="major">Resume</h2>
-							<a href="images/Rita A Resume.pdf" target="_blank">
-								<span class="image main"><img src="images/resume.png" alt="Resume" /></span>
-							</a>
-						</article>	
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								
-								
-								<p>Email: <a href="mailto:ritaaziz2004@icloud.com">ritaaziz2004@icloud.com</a></p>
-            					<p>Phone: <a href="tel:+15712443715">571-244-3715</a></p>
-								
-								<ul class="icons">
-									<li><a href="https://github.com/ritaazizz" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/rita-aziz-293103255" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
+    .education-image img {
+        max-width: 80%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .project-info p {
+            margin-bottom: 20px;
+        }
+        
+        .experience-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .experience-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .experience-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .coursework-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            list-style-type: none;
+        }
+        
+        .coursework-list li {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .resume-section {
+    text-align: center;
 }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+.resume-img {
+    max-width: 60%; /* Adjust this value to make the image smaller */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-								<section>
-									<h3 class="major">Lists</h3>
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        #contact {
+            background-color: #f8f8f8;
+        }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									</ul>
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+        .contact-item i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 30px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">RA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#coursework">Coursework</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Rita Aziz</h1>
+            <p>Aspiring Software Engineer & Computer Science Student</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
 
-							</article>
-
+	<section id="education">
+		<div class="container">
+			<h2>Education</h2>
+			<div class="education-item">
+				<div class="education-content">
+					<div class="education-text">
+						<h3>George Mason University</h3>
+						<h4>Computer Science, B.S.</h4>
+						<h5>August 2022 - May 2026</h5>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Rita 2024 <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
+					<div class="education-image">
+						<img src="images/mason.png">
+					</div>
+				</div>
 			</div>
+		</div>
+	</section>
 
-		<!-- BG -->
-			<div id="bg"></div>
+	<section id="coursework">
+        <div class="container">
+            <h2>Relevant Coursework</h2>
+            <ul class="coursework-list">
+                <li>Object-Oriented Programming</li>
+                <li>Low-Level Programming</li>
+                <li>Discrete Mathematics</li>
+                <li>Probability and Statistics for Engineers and Scientists</li>
+                <li>Data Structures</li>
+                <li>Formal Methods and Models</li>
+                <li>Computer Systems & Programming</li>
+                <li>Analysis of Alogirithms</li>
+                <li>Software Engineering</li>
+            </ul>
+        </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fas fa-copyright"></i> C</li>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-laptop-code"></i> Technologies</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-brain"></i> OpenAI</li>
+                        <li><i class="fab fa-react"></i> NextJS</li>
+                        <li><i class="fab fa-node"></i> NodeJS</li>
+                        <li><i class="fab fa-aws"></i> AWS</li>
+                        <li><i class="fab fa-stripe"></i> StripeAPI</li>
+                        <li><i class="fab fa-react"></i> ReactJS</li>
+                        <li><i class="fas fa-fire"></i> Firebase</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-linux"></i> Linux</li>
+                        <li><i class="fab fa-ubuntu"></i> Unix</li>
+                        <li><i class="fab fa-windows"></i> Windows</li>
+                        <li><i class="fab fa-apple"></i> MacOS</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-linkedin"></i> HTML for Programmers</li>
+                        <li><i class="fab fa-linkedin"></i> CSS for Programmers</li>
+                        <li><i class="fas fa-award"></i> AT&T 2024 Technology Academy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	</body>
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/pantry.png" alt="Pantry Tracker">
+                    <div class="project-info">
+                        <h3>Pantry Tracker</h3>
+                        <p>React, NextJS, Material-UI, Firebase</p>
+                        <a href="https://pantry-tracker-9lpqgu3gz-rita-azizs-projects.vercel.app/" class="btn" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/customersupp.webp" alt="AI Customer Support">
+                    <div class="project-info">
+                        <h3>AI Customer Support</h3>
+                        <p>OpenAI, NextJS, AWS, EC2, Lambda</p>
+                        <a href="https://github.com/ritaazizz/ai_customer_support" class="btn" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>AI Flashcards & Stripe</h3>
+                        <p>OpenAI, Authentication Payment Gateway, Server-side programming</p>
+                        <p>Coming Soon!</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>AI Rate my Professor</h3>
+                        <p>RAG, OpenAI, Vectors</p>
+                        <p>Coming Soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Software Engineering Fellow</h3>
+                <h4>Headstarter AI</h4>
+                <p>July 2024 - Present</p>
+                <ul>
+                    <li>Will build 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users</li>
+                    <li>Will develop projects from design to deployment leading 4+ engineering fellows using MVC design patterns</li>
+                    <li>Will be coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git, and microservice patterns</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-container">
+                <img src="images/resume.png" alt="Resume Preview" class="resume-img">
+                <a href="images/Rita A Resume.pdf" class="btn" target="_blank">Download Full Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:ritaaziz2004@icloud.com">ritaaziz2004@icloud.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+15712443715">571-244-3715</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/ritaazizz">https://github.com/ritaazizz</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/rita-aziz-293103255">https://www.linkedin.com/in/rita-aziz-293103255</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rita Aziz</p>
+        </div>
+    </footer>
+</body>
 </html>
